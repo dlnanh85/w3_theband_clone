@@ -87,6 +87,10 @@ html {
     padding: 8px 16px;
     text-decoration: none;
     border: none;
+    text-align: center;
+    
+    -webkit-appearance: none;
+    /* somehow this will fix the weird rendering of the button on iPhone browser */
 }
 
 .button:hover {
@@ -157,8 +161,8 @@ html {
 
 #nav > li:hover > a,
 #nav .subnav li:hover a {
-    color: #000;
     background-color: #ccc;
+    color: #000;
 }
 
 #nav li:hover .subnav {
@@ -192,6 +196,13 @@ html {
     float: right;
 }
 
+#header .menu-button {
+    color: #fff;
+    line-height: var(--headerheight);
+    padding: 0 21px;
+    display: none;
+}
+
 #header .search-button {
     color: #fff;
     line-height: var(--headerheight);
@@ -202,6 +213,11 @@ html {
 #header .search-button:hover {
     cursor: pointer;
     background-color: #f44336;
+}
+
+#header .menu-button:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 /* SLIDER */
@@ -220,6 +236,7 @@ html {
     bottom: 0;
     width: 100%;
     padding-bottom: 51px;
+    text-shadow: 0 0 1px #000;
 }
 
 #slider #text-header {
@@ -241,15 +258,15 @@ html {
 }
 
 #about .members {
-    padding-top: 35px;
+    margin-top: 35px;
 }
 
-#content .member-name {
+#about .member-name {
     font-size: 15px;
     margin: 15px 0;
 }
 
-#content .member-image {
+#about .member-image {
     width: 154px;
     border-radius: 4px;
 }
@@ -296,7 +313,7 @@ html {
 /* TOUR -> PLACES */
 
 #tour .places {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 #tour .place-img {

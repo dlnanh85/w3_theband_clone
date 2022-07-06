@@ -1,0 +1,126 @@
+/* PC */
+@media (min-width: 1024px) {
+    
+}
+
+/* TABLET */
+@media (max-width: 1023px) and (min-width: 740px) {
+    
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 1023px) {
+    /* COMMON */
+    .ts-full-width {
+        width: 100%;
+    }
+
+    .button {
+        padding: 16px 16px;
+        font-size: 16px;
+    }
+    
+    #contact .contact-info {
+        line-height: 2;
+    }
+
+    #contact .contact-form .form-control {
+        padding: 14px;
+    }
+
+    #footer .socials a {
+        font-size: 27px;
+        padding: 8px;
+    }
+
+    #footer .copyright {
+        font-size: 20px;
+    }
+
+    #footer .copyright a {
+        padding: 8px 0;
+        display: inline-block;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 739px) {
+    
+    /* BEGIN: COMMON */
+    .s-full-width,
+    .s-one-col {
+        width: 100%;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+
+    .s-mt-16 {
+        margin-top: 16px;
+    }
+
+    .s-mt-32 {
+        margin-top: 32px;
+    }
+    /* END: COMMON */
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .menu-button {
+        display: inline-block;
+    }
+    
+    #header .search-button {
+        display: none;
+    }
+    
+    #header .menu-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #nav {
+        display: block;
+    }
+    
+    #nav li {
+        display: block;
+    }
+    
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #nav > li > a {
+        padding-top: 2px;
+    }
+    
+    #nav > li:hover > a,
+    #nav .subnav li:hover a {
+        background-color: #000;
+        color: #fff;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 1px 30px;
+    }
+
+    #about .member-image {
+        width: 60%;
+    }
+
+    #about .members {
+        margin-top: 19px; 
+    }
+}
