@@ -262,12 +262,14 @@
     <!-- JS FOR RESPONSIVE MOBILE -->
     <script>
         const menuButton = document.querySelector('.menu-button')
+        const wholePage = document.querySelector('body')
         const header = document.getElementById('header')
         const headerHeight = header.clientHeight
         const navSections = document.querySelectorAll('#nav li a[href*="#"]')
 
         // Show/Hide menu
-        menuButton.addEventListener('click', function () {
+        menuButton.addEventListener('click', function (event) {
+            event.stopPropagation() //stop the event moving to wholePage causes menu to close
             if (header.clientHeight === headerHeight)
                 header.style.height = 'auto'
             else
@@ -277,12 +279,17 @@
         // Close menu when an option is clicked
         for (const navSection of navSections) {
             navSection.addEventListener('click', function (event) {
+                event.stopPropagation() //stop the event moving to wholePage causes menu to close
                 const isParentMenu = navSection.nextElementSibling && navSection.nextElementSibling.classList.contains('subnav')
                 if (!isParentMenu)
                     header.style.height = null
                 else
                     event.preventDefault();
             })
+        
+            // Close menu when clicked outside the menu
+            wholePage.addEventListener('click', function () {header.style.height = null})
+
         }
     </script>
 </body>
