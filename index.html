@@ -283,8 +283,10 @@
                 else
                     event.preventDefault();
             })
+
+            // Close menu when clicked outside the menu
+            wholePage.addEventListener('click', function () {header.style.height = null})
         }
     </script>
 </body>
 </html>
-
